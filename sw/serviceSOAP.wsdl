@@ -1,0 +1,44 @@
+<definitions name="SoapServer"
+             targetNamespace="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/ws/serviceSOAP.php"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/ws/serviceSOAP.php"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <types>
+
+    </types>
+
+    <message name="comprobarDNIRequest">
+        <part name="dni" type="xs:string"/>
+    </message>
+
+    <message name="comprobarDNIResponse">
+        <part name="correcto" type="xs:boolean"/>
+    </message>
+
+    <portType name="DNIPortType">
+        <operation name="comprobarDNI">
+            <input message="tns:comprobarDNIRequest"/>
+            <output message="tns:comprobarDNIResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="DNIBinding" type="tns:DNIPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="comprobarDNI">
+            <soap:operation soapAction="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/ws/serviceSOAP.php?comprobarDNI"/>
+            <input>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/ws/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/ws/"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="ServiceSOAP">
+        <port name="DNIPort" binding="tns:DNIBinding">
+            <soap:address location="http://192.168.20.19/DAW204/public_html/dwes/mantenimiento/POO/index?location=servicioWeb" />
+        </port>
+    </service>
+</definitions>

@@ -1,0 +1,384 @@
+/* Importar fuentes */
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('../fonts/oswald-regular-webfont.eot');
+    src: url('../fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-regular-webfont.woff') format('woff'),
+         url('../fonts/oswald-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-regular-webfont.svg#oswaldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('../fonts/oswald-bold-webfont.eot');
+    src: url('../fonts/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-bold-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-bold-webfont.woff') format('woff'),
+         url('../fonts/oswald-bold-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-bold-webfont.svg#oswaldbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('../fonts/roboto-italic-webfont.eot');
+    src: url('../fonts/roboto-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-italic-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-italic-webfont.woff') format('woff'),
+         url('../fonts/roboto-italic-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	padding-top: 80px;
+	font-family: oswaldregular;
+	background-color: #00897B;
+}
+header .menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+header .menu .titulo {
+	flex: 0 1 auto;
+	padding: 15px;
+	overflow: hidden;
+	font-family: oswaldbold;
+	text-decoration: none;
+	text-align: center;
+	font-size: 32px;
+	color: #00897B;
+}
+header .menu img {
+	flex: 0 0 auto;
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	padding: 8px;
+	margin: 15.5px;
+	border: 3px solid #00897B;
+	border-radius: 10px;
+}
+header {
+	width: 100%;
+}
+header nav {
+	position: fixed;
+	right: 100%;
+	width: 30%;
+	min-width: 250px;
+	height: calc(100% - 80px);
+	margin: 0px;
+	overflow-y: scroll;
+	font-family: oswaldbold;
+	background-color: #FFFFFF;
+}
+header nav ul {
+	list-style: none;
+}
+header nav ul li {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+header nav ul li:first-child {
+	border-top: 1px solid #000000;
+}
+header nav ul li a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #000000;
+}
+header nav ul li img {
+	position: absolute;
+	top: 24.5px;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	transition: 0.5s ease-in-out;
+}
+header nav ul li .children {
+	position: relative;
+	display: none;
+	width: 100%;
+	background-color: #6A6A6A;
+}
+header nav ul li .children li {
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: none;
+	transition: 0.3s ease-in-out;
+}
+header nav ul li .children li:last-child {
+	border-bottom: none;
+}
+header nav ul li .children li a {
+	display: block;
+	margin-left: 20px;
+	font-family: oswaldregular;
+	color: #FFFFFF;
+}
+main {
+	min-height: 200px;
+	padding-top: 80px;
+	font-family: robotoregular;
+	text-align: center;
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 20px;
+	font-family: oswaldregular;
+	font-size: 30px;
+}
+.php {
+	height: calc(100vh - 300px);
+	margin: 0px 20px;
+	padding: 10px;
+	overflow-y: scroll;
+	text-align: left;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.php h1 {
+	color: #000000;
+}
+/* Transiciones y transformaciones */
+header nav ul li .children li:hover {
+	background-color: #00897B;
+	transition: 0.3s ease-in-out;
+}
+header nav ul li.girar img {
+	transform: rotate(180deg);
+	transition: 0.5s ease-in-out;
+}
+/* ScrollBar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+    background-color: #CCCCCC;
+}
+/* Hojas de estilo */
+@media screen and (max-width: 800px) {
+	body {
+		padding-top: 160px;
+	}
+	header .menu {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	header .menu .titulo {
+		max-height: 80px;
+	}
+	header nav {
+		position: fixed;
+		width: 100%;
+		height: calc(100% - 160px);
+		border-bottom: 1px solid #000000;
+	}
+	.php {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 700px) {
+	
+}
+@media screen and (max-width: 500px) {
+	body {
+		padding-top: 150px;
+	}
+	header nav {
+		height: calc(100% - 150px);
+	}
+	header .menu .titulo {
+		font-size: 26px;
+	}
+	h1 {
+		font-size: 26px;
+	}
+	.php {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 400px) {
+	body {
+		padding-top: 140px;
+	}
+	header nav {
+		height: calc(100% - 140px);
+	}
+	header .menu .titulo {
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 300px) {
+	body {
+		padding-top: 130px;
+	}
+	header nav {
+		height: calc(100% - 130px);
+	}
+	header .menu .titulo {
+		font-size: 12.95px;
+	}
+	h1 {
+		font-size: 12.95px;
+	}
+	.php {
+		font-size: 8px;
+	}
+}
+/* Estilos particulares */
+label {
+	display: block;
+	padding: 5px;
+}
+input {
+	padding: 2px 0px;
+	border: none;
+}
+.button {
+	width: 100px;
+	cursor: pointer;
+	margin-top: 15px;
+	padding: 5px;
+	border: none;
+	background-color: #DE703B;
+	color: #ffffff;
+}
+.campoerror {
+	font-family: robotobold;
+	color: #a8281c;
+}
+table {
+	margin-top: 50px;
+	display: inline-block;
+}
+table tr td:last-child {
+	display: flex;
+	justify-content: space-around;
+}
+table tr td a {
+	display: inline-block;
+}
+table tr td a img {
+	vertical-align: middle;
+}
+td {
+	padding: 4px 20px;
+	background-color: #ffffff;
+	color: #000000;
+}
+th {
+	padding: 4px 20px;
+	font-weight: normal;
+	background-color: #DE703B;
+	color: #ffffff;
+}
+.criterioBusqueda {
+	width: 25%;
+	height: 30px;
+	padding: 0px;
+}
+.buttonBuscar, .buttonReset {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin: 0px 5px;
+	border: none;
+	vertical-align: middle;
+	background: none;
+
+}
+.buttonBuscar img, .buttonReset img {
+		width: 30px;
+		height: 30px;
+}
+.buttonReset:hover {
+	transform: rotate(360deg);
+	transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+	table {
+		font-size: 12px;
+	}
+	.criterioBusqueda {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 400px) {
+	table {
+		font-size: 10px;
+	}
+	table tr td a {
+		
+	}
+	table tr td a img {
+		width: 20px;
+		height: 20px;
+	}
+	.criterioBusqueda {
+		height: 20px;
+	}	
+	.buttonBuscar, .buttonReset {
+		width: 20px;
+		height: 20px;
+	}
+	.buttonBuscar img, .buttonReset img {
+		width: 20px;
+		height: 20px;
+	}
+}
+@media screen and (max-width: 300px) {
+	table {
+		font-size: 8px;
+	}
+}
